@@ -1,0 +1,399 @@
+:root {
+  --color-primary: #0019c1;
+  --color-secondary: #8b8b8b;
+  --color-background: #f2fcff;
+  --color-white: #fff;
+  --color-black: #000;
+  --border-color: #e1e1e1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: Roboto, sans-serif;
+}
+
+p,
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+/* ============= Base Button Styles ============= */
+.button {
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  width: 136px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* ============= Header Styles ============= */
+.header {
+  display: flex;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header__container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 0 40px;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header__logo {
+  width: 100px;
+  height: 57px;
+}
+
+.header__actions {
+  align-items: center;
+  gap: 32px;
+  display: flex;
+}
+
+.header__status {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.wishlist-link {
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+
+.wishlist-button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.wishlist-button:hover {
+  background: #f8f8f8;
+}
+
+.wishlist-button.active {
+  color: #1930c7;
+  border-color: #1930c7;
+}
+
+.wishlist-counter {
+  background: #1930c7;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.wishlist-page {
+  padding: 50px 0;
+}
+
+.wishlist-items-container {
+  margin-top: 30px;
+}
+
+.wishlist-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 15px;
+}
+
+.wishlist-item img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.remove-btn {
+  margin-left: auto;
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.empty-wishlist {
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+/* ============= Hero Section ============= */
+.hero {
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  display: flex;
+  padding: 0 20px;
+}
+
+.hero__title {
+  margin-bottom: 36px;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.hero__subtitle {
+  margin-bottom: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 600px;
+}
+
+/* ============= Products Section ============= */
+.products {
+  background-color: var(--color-background);
+  text-align: center;
+  padding: 50px 0;
+}
+
+.products--white {
+  background-color: var(--color-white);
+}
+
+.products__title {
+  margin-bottom: 36px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.products__subtitle {
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+
+.products__grid {
+  justify-content: center;
+  gap: 24px;
+  padding: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  border: 1px solid var(--border-color);
+  background-color: #f6f6f6;
+  width: 300px;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+.product-card__image {
+  background-color: var(--color-white);
+  border: 1px solid var(--border-color);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 260px;
+  display: flex;
+}
+
+.product-card__image img {
+  object-fit: contain;
+  width: 170px;
+  height: 230px;
+}
+
+.product-card__name {
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-card__price {
+  margin-top: 7px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.product-card__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-error {
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  background: #fff9e6;
+  border: 1px dashed #ffb800;
+  border-radius: 8px;
+}
+
+.admin-link {
+  color: #0066cc;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.admin-link:hover {
+  text-decoration: none;
+}
+
+/* =================== Mobile (до 768px) =================== */
+@media (max-width: 768px) {
+  .header {
+    top: 15px;
+    padding: 0 15px;
+  }
+
+  .header__container {
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  .header__logo {
+    width: 80px;
+    height: 45px;
+  }
+
+  .header__actions {
+    gap: 15px;
+  }
+
+  .header__status {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 50px;
+  }
+
+  .hero {
+    height: 400px;
+    padding-top: 80px;
+  }
+
+  .hero__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .hero__subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+
+  .products__grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* =================== Laptop (768px-1024px) =================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .header__container {
+    padding: 0 30px;
+  }
+
+  .hero {
+    height: 500px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+  }
+
+  .products__grid {
+    justify-content: space-around;
+  }
+
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+
+/* =================== Desktop (1024px+) =================== */
+@media (min-width: 1024px) {
+  .products__grid {
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* =================== Large Desktop (1440px+) =================== */
+@media (min-width: 1440px) {
+  .hero__title {
+    font-size: 34px;
+    font-weight: 600;
+  }
+
+  .hero__subtitle {
+    font-size: 14px;
+    font-weight: 800;
+  }
+}

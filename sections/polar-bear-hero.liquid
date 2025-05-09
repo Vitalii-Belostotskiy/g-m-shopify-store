@@ -1,0 +1,38 @@
+{%- if section.settings.background_image != blank -%}
+  {% assign bg_image = section.settings.background_image | image_url: width: 2000 %}
+{%- else -%}
+  {% assign bg_image = 'hero-bg-default.png' | asset_url %}
+{%- endif -%}
+
+<div class="hero" style="
+  background-image: url('{{ bg_image }}');
+">
+  <h1 class="hero__title">{{ section.settings.title }}</h1>
+  <p class="hero__subtitle">{{ section.settings.subtitle }}</p>
+  <button class="button button--primary">start</button>
+</div>
+
+{% schema %}
+{
+  "name": "Builder Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Create Your Own Winter Look"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Choose one product in each section and get 20% on the whole bundle"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Custom Background Image"
+    }
+  ]
+}
+{% endschema %}
