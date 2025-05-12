@@ -1,5 +1,9 @@
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -84,6 +88,7 @@
     }
   },
   "order": [
+    "main",
     "rich_text",
     "collage-0",
     "featured-collection"
